@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="main"
+            type="com.project.stageone.movie.activities.MainActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/SpinnerStyle"
+            android:focusable="true" />
+
+        <include
+            android:id="@+id/recycle"
+            layout="@layout/layout_recycle_view" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/ProgressBarStyle" />
+    </RelativeLayout>
+</layout>

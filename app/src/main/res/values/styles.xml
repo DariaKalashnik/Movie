@@ -1,0 +1,326 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Style for Movie Poster (list_items.xml) -->
+    <style name="PosterStyle">
+        <item name="android:layout_width">@dimen/value_185dp</item>
+        <item name="android:layout_height">@dimen/value_227dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">@dimen/value_10dp</item>
+    </style>
+
+    <!-- Style for Movie Title (list_items.xml) -->
+    <style name="PosterTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/poster</item>
+        <item name="android:layout_margin">@dimen/value_10dp</item>
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/value_16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style for CardView (list_items.xml) -->
+    <style name="CardViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/value_5dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:padding">@dimen/value_10dp</item>
+    </style>
+
+    <!-- Style for Favorite movies CardView (list_favorite_movies.xml) -->
+    <style name="CardViewFavoriteStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/value_5dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:padding">@dimen/value_10dp</item>
+    </style>
+
+
+    <!-- Style for Favorites Movie Poster (list_favorite_movies.xml) -->
+    <style name="FavoritePosterStyle">
+        <item name="android:layout_width">@dimen/value_100dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentStart" tools:targetApi="jelly_bean_mr1">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginRight">@dimen/value_16dp</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">@dimen/value_16dp</item>
+    </style>
+
+    <!-- Style for Favorites Movie Title (list_favorite_movies.xml) -->
+    <style name="FavoriteTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_toEndOf" tools:targetApi="jelly_bean_mr1">@id/favorite_movie_poster</item>
+        <item name="android:layout_toRightOf">@id/favorite_movie_poster</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/value_16sp</item>
+    </style>
+
+    <!-- Style for RecycleView (activity_main.xml) -->
+    <style name="RecycleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/value_5dp</item>
+        <item name="android:layout_below">@id/toolbar</item>
+    </style>
+
+    <!-- Style for Toolbar (layout_toolbar.xml) -->
+    <style name="ToolbarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentStart" tools:targetApi="jelly_bean_mr1">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <!-- Style for Spinner (main_activity.xml) -->
+    <style name="SpinnerStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@android:color/white</item>
+        <item name="android:layout_alignRight">@id/toolbar</item>
+        <item name="android:layout_alignEnd" tools:targetApi="jelly_bean_mr1">@id/toolbar</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginTop">@dimen/value_16dp</item>
+    </style>
+
+    <!-- Style for Spinner layout (custom_spinner.xml) -->
+    <style name="SpinnerLayoutStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/value_16sp</item>
+    </style>
+
+    <!-- Style for Progress Bar (activity_main.xml) -->
+    <style name="ProgressBarStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <!-- Style for ScrollView(activity_detail.xml) -->
+    <style name="ScrollViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/background</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:scrollbarThumbVertical">@android:color/transparent</item>
+    </style>
+
+    <!-- Style for LinearLayout(Poster&Title) container (activity_detail.xml) -->
+    <style name="PrimaryContainerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/value_10dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!-- Style for LinearLayout container (activity_detail.xml (land)) -->
+    <style name="PrimaryContainerStyle.Land">
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">@dimen/value_50dp</item>
+        <item name="android:layout_marginLeft">@dimen/value_50dp</item>
+    </style>
+
+    <!-- Style for Labels (activity_detail.xml) -->
+    <style name="MovieTextViewStyle.LabelsStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
+    <!-- Style for TextViews that store Movie data (activity_detail.xml) -->
+    <style name="MovieTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/value_16sp</item>
+        <item name="android:textColor">@color/movie_data</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">@dimen/value_16dp</item>
+        <item name="android:layout_marginLeft">@dimen/value_16dp</item>
+    </style>
+
+    <!-- Style for Poster (activity_detail.xml) -->
+    <style name="PosterThumbnailStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">@dimen/value_16dp</item>
+        <item name="android:layout_marginLeft">@dimen/value_16dp</item>
+    </style>
+
+    <!-- Style for Movie Title (activity_detail.xml) -->
+    <style name="TitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/value_5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/value_25sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">@dimen/value_50dp</item>
+        <item name="android:layout_marginLeft">@dimen/value_50dp</item>
+    </style>
+
+    <!-- Style for ExpendableTextView (list_review.xml) -->
+    <style name="ExpandableTextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimaryLight</item>
+    </style>
+
+    <!-- Style for Review Author (list_review.xml) -->
+    <style name="ReviewTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/value_16sp</item>
+        <item name="android:padding">@dimen/value_10dp</item>
+    </style>
+
+    <!-- Style for Review Expendable text (list_review.xml) -->
+    <style name="ReviewTextStyle.Expandable">
+      <item name="android:padding">@dimen/value_10dp</item>
+      <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- Style for Expendable ImageButton (list_review.xml) -->
+    <style name="ExpandableImgButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/value_10dp</item>
+        <item name="android:layout_gravity">right|bottom</item>
+        <item name="android:tint">@color/colorPrimaryDark</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- Style for Divider for ExpendableTextView (list_review.xml) -->
+    <style name="DividerStyle.Expandable">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_height">2dp</item>
+    </style>
+
+    <!-- Style for LinearLayout if no Reviews provided (list_review.xml) -->
+    <style name="NoReviewsLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Style for View if no Reviews provided (list_review.xml) -->
+    <style name="ViewNoReviewsStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">@dimen/value_10dp</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <!-- Style for TextView if no Reviews provided (list_review.xml) -->
+    <style name="ViewNoReviewsStyle.TextView">
+        <item name="android:text">@string/text_view_no_reviews</item>
+        <item name="android:textSize">@dimen/value_18sp</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+    </style>
+
+    <!-- Style for ImageView if no Reviews provided (list_review.xml) -->
+    <style name="ViewNoReviewsStyle.ImageView">
+        <item name="android:layout_weight">0.2</item>
+        <item name="android:layout_height">@dimen/value_50dp</item>
+        <item name="android:tint">@color/colorPrimaryLight</item>
+        <item name="android:src">@drawable/sad_smile</item>
+    </style>
+
+    <!-- Style for Trailer Poster (list_trailers.xml) -->
+    <style name="TrailerPoster">
+        <item name="android:layout_width">@dimen/value_100dp</item>
+        <item name="android:layout_height">@dimen/value_50dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentStart" tools:targetApi="jelly_bean_mr1">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">@dimen/value_16dp</item>
+        <item name="android:layout_marginRight">@dimen/value_16dp</item>
+        <item name="android:tint">@color/colorPrimaryLight</item>
+        <item name="android:src">@drawable/youtube</item>
+    </style>
+
+    <!-- Style for Trailer Title (list_trailers.xml) -->
+    <style name="TrailerTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_toEndOf" tools:targetApi="jelly_bean_mr1">@id/trailer_movie_poster</item>
+        <item name="android:layout_toRightOf">@id/trailer_movie_poster</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/value_16sp</item>
+    </style>
+
+    <!-- Style for Divider (list_trailers.xml) -->
+    <style name="DividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_below">@id/trailer_movie_poster</item>
+        <item name="android:background">@color/colorDivider</item>
+    </style>
+
+    <!-- Style for TextViews that store Movie Overview (activity_detail.xml) -->
+    <style name="MovieTextViewStyle.Overview">
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">@dimen/value_20dp
+        </item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">@dimen/value_30dp
+        </item>
+        <item name="android:layout_marginTop">@dimen/value_10dp</item>
+    </style>
+
+    <!-- Style for Label Overview (activity_detail.xml) -->
+    <style name="MovieTextViewStyle.LabelsStyle.Overview">
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">@dimen/value_30dp
+        </item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">@dimen/value_30dp
+        </item>
+    </style>
+
+    <!-- Style for TextViews that store Movie Overview (activity_detail.xml (land)) -->
+    <style name="MovieTextViewStyle.Overview.Land">
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">@dimen/value_50dp
+        </item>
+    </style>
+
+    <!-- Style for Label Overview (activity_detail.xml (land)) -->
+    <style name="MovieTextViewStyle.LabelsStyle.Overview.Land">
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">@dimen/value_50dp
+        </item>
+    </style>
+
+    <!-- Style for BottomNavigationView (activity_detail.xml) -->
+    <style name="BottomNavigationViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

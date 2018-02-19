@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/no_reviews"
+        style="@style/NoReviewsLayout"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            style="@style/ViewNoReviewsStyle.TextView" />
+
+        <ImageView
+            style="@style/ViewNoReviewsStyle.ImageView"
+            android:contentDescription="@string/img_no_review" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@android:color/transparent">
+
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/expand_text_view"
+        style="@style/ExpandableTextViewStyle"
+        expandableTextView:animDuration="200"
+        expandableTextView:maxCollapsedLines="4">
+
+        <TextView
+            android:id="@+id/review_author"
+            style="@style/ReviewTextStyle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@id/expandable_text"
+            style="@style/ReviewTextStyle.Expandable" />
+
+        <ImageButton
+            android:id="@id/expand_collapse"
+            style="@style/ExpandableImgButton"
+            android:contentDescription="@string/img_expandable_button" />
+        <View
+            style="@style/DividerStyle.Expandable"/>
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+    </ScrollView>
+</RelativeLayout>

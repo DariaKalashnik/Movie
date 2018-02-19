@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/trailer_movie_poster"
+        style="@style/TrailerPoster"
+        android:contentDescription="@string/img_trailer" />
+
+    <TextView
+        android:id="@+id/trailer_movie_title"
+        style="@style/TrailerTitle"
+        tools:text="@string/app_name" />
+
+    <View
+        style="@style/DividerStyle" />
+</RelativeLayout>

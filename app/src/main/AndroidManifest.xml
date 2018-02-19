@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.project.stageone.movie">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:configChanges="locale"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustResize">
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.DetailActivity"
+            android:label="Movie Detail"
+            android:parentActivityName=".activities.MainActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.stageone.movie.activities.MainActivity" />
+        </activity>
+        <receiver
+            android:name=".rest.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name=".data.MovieContentProvider"
+            android:authorities="com.project.stageone.movie"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FavoriteActivity"
+            android:label="@string/favorite_activity_name"
+            android:parentActivityName=".activities.MainActivity"
+            tools:targetApi="jelly_bean">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.stageone.movie.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.TrailerActivity"
+            android:label="@string/trailers_activity_name"
+            android:parentActivityName=".activities.DetailActivity"
+            tools:targetApi="jelly_bean" />
+        <activity
+            android:name=".activities.ReviewActivity"
+            android:label="@string/reviews_activity_name"
+            android:parentActivityName=".activities.DetailActivity"
+            tools:targetApi="jelly_bean" />
+    </application>
+</manifest>

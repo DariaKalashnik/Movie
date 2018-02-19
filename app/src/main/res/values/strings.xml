@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="favorite_activity_name">Favorites</string>
+    <string name="trailers_activity_name">Trailers</string>
+    <string name="reviews_activity_name">Reviews</string>
+
+    <!-- Values for Movie Sorting -->
+    <string-array name="selection_values">
+        <item name="most_popular_movie_value" translatable="false">popular</item>
+        <item name="top_rated_movie_value" translatable="false">top_rated</item>
+        <item name="favorite_movie_value" translatable="false">favorite</item>
+    </string-array>
+
+    <!-- Spinner Labels for Movie Selection -->
+    <string-array name="selection_spinner_labels">
+        <item name="most_popular_movies">Popular</item>
+        <item name="top_rated_movies">Top Rated</item>
+        <item name="favorite_movies">Favorite</item>
+    </string-array>
+
+    <!-- Labels for Movie data -->
+    <string name="release_date">Release Date:</string>
+    <string name="vote_average">Vote Average:</string>
+    <string name="original_lng">Original Language:</string>
+    <string name="plot_synopsis">Review:</string>
+
+    <!-- Tools text values -->
+    <string name="tools_movie_title" translatable="false">The Movie Title</string>
+    <string name="tool_release_date" translatable="false">2017–07–07</string>
+    <string name="tools_vote_average" translatable="false">7.5</string>
+    <string name="tools_original_lng" translatable="false">English</string>
+    <string name="tools_plot_synopsis" translatable="false">Movie Description</string>
+
+    <!-- Error messages -->
+    <string name="toast_on_failure">Data fetch was failed!</string>
+    <string name="alert_dialog_title">Error!</string>
+    <string name="no_internet">Please, check your Internet connectivity</string>
+    <string name="toast_error_message">Oops, an error occurred</string>
+    <string name="toast_data_insertion_failed">Error while insertion occurred</string>
+    <string name="toast_data_was_already_added">Movie is already in favorite list</string>
+    <string name="text_view_no_reviews">No Reviews provided for the movie</string>
+
+    <!-- Success messages -->
+    <string name="toast_data_insertion_success">Movie was added to Favorites</string>
+
+    <string name="okay_button">OK</string>
+    <string name="title_items_list">Items</string>
+    <string name="title_items_detail">Items Detail</string>
+
+
+    <!-- Bottom Menu items -->
+    <string name="text_trailers">Trailers</string>
+    <string name="text_overview">Overviews</string>
+    <string name="text_favorites">Favorites</string>
+
+    <!-- Favorite Menu item -->
+    <string name="add_to_favorites">Add to Favorites</string>
+
+    <!-- Favorite Menu item -->
+    <string name="insert_movie_failed">Insertion was failed</string>
+    <string name="insert_movie_success">Added to Favorites</string>
+
+    <!-- Content description strings -->
+    <string name="img_favorite">poster of the favorite movie</string>
+    <string name="img_movie_poster_template">template for movie poster</string>
+    <string name="img_expandable_button">ImageButton for ExpandableTextView</string>
+    <string name="img_trailer">poster of the movie trailer</string>
+    <string name="img_no_review">image displayed in case no reviews are provided</string>
+</resources>
